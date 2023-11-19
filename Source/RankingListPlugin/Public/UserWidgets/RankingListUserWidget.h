@@ -25,15 +25,12 @@ public:
 	void SortRankingList();
 
 	UFUNCTION(BlueprintCallable)
-	void UpdateRankingListView();
-
-	UFUNCTION(BlueprintSetter)
 	void SetPlayerInfos(TArray<FRankingListPlayerInfo> NewPlayerInfos);
 	
 protected:
 	virtual void NativeConstruct() override;
 	
-	UPROPERTY(BlueprintReadWrite, meta = (BindWidget))
+	UPROPERTY(BlueprintReadWrite,meta = (BindWidget))
 	UListView* RankingListView;
 
 	/*

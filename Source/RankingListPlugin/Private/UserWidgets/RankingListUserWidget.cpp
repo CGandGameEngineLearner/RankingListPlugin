@@ -8,29 +8,13 @@
 void URankingListUserWidget::NativeConstruct()
 {
 	Super::NativeConstruct();
-	
-	if(RankingListView)
-	{
-		
-		UpdateRankingListView();
-	}
 }
 
-void URankingListUserWidget:: UpdateRankingListView()
-{
-	RankingListView->ClearListItems();
-	for (auto& PlayerInfo : PlayerInfos)
-	{
-		URankingListPlayerInfoUserWidget* PlayerInfoUserWidget=CreateWidget<URankingListPlayerInfoUserWidget>(this, RankingListPlayerInfoSubclassOf);
-		PlayerInfoUserWidget->SetPlayerInfo(PlayerInfo);
-		RankingListView->AddItem(PlayerInfoUserWidget);
-	}
-}
+
 
 void URankingListUserWidget::SetPlayerInfos(TArray<FRankingListPlayerInfo> NewPlayerInfos)
 {
 	PlayerInfos=NewPlayerInfos;
-	UpdateRankingListView();
 }
 
 void URankingListUserWidget::SortRankingList()
@@ -39,5 +23,4 @@ void URankingListUserWidget::SortRankingList()
 	{
 		return PlayerInfoA>PlayerInfoB;
 	});
-	UpdateRankingListView();
 }

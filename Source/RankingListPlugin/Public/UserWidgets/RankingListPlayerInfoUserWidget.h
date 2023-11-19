@@ -6,12 +6,17 @@
 #include "Blueprint/UserWidget.h"
 #include "Components/TextBlock.h"  // Include for UTextBlock
 #include "Components/Image.h"      // Include for UImage
+#include "Blueprint/IUserObjectListEntry.h"
 #include "RankingListPlayerInfoUserWidget.generated.h"
 
 USTRUCT(BlueprintType)
 struct RANKINGLISTPLUGIN_API FRankingListPlayerInfo
 {
 	GENERATED_BODY()
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	int64 UID;
+
 	
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	FString PlayerName;
@@ -38,7 +43,7 @@ struct RANKINGLISTPLUGIN_API FRankingListPlayerInfo
  *
  */
 UCLASS()
-class RANKINGLISTPLUGIN_API URankingListPlayerInfoUserWidget : public UUserWidget
+class RANKINGLISTPLUGIN_API URankingListPlayerInfoUserWidget : public UUserWidget,public IUserObjectListEntry
 {
 	GENERATED_BODY()
 
@@ -47,13 +52,13 @@ public:
 	UPROPERTY(BlueprintReadOnly)
 	FRankingListPlayerInfo PlayerInfo;
 
-	UPROPERTY(meta = (BindWidget))
+	UPROPERTY(BlueprintReadWrite,meta = (BindWidget))
 	UTextBlock* PlayerName;
 
-	UPROPERTY(meta = (BindWidget))
+	UPROPERTY(BlueprintReadWrite,meta = (BindWidget))
 	UImage* PlayerAvatar;
 
-	UPROPERTY(meta = (BindWidget))
+	UPROPERTY(BlueprintReadWrite,meta = (BindWidget))
 	UTextBlock* PlayerScore;
 
 	UFUNCTION(BlueprintCallable)
@@ -61,4 +66,5 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	FRankingListPlayerInfo GetPlayerInfo() const;
+	
 };
