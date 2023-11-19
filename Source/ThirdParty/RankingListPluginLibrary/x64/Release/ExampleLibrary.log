@@ -1,0 +1,12 @@
+﻿  ExampleLibrary.cpp
+    正在创建库 F:\gamejam\TencentGameHomework\RankingListUnrealTemplateProject\Plugins\RankingListPlugin\Source\ThirdParty\RankingListPluginLibrary\x64\Release\ExampleLibrary.lib 和对象 F:\gamejam\TencentGameHomework\RankingListUnrealTemplateProject\Plugins\RankingListPlugin\Source\ThirdParty\RankingListPluginLibrary\x64\Release\ExampleLibrary.exp
+  正在生成代码
+  0 of 1 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  已完成代码的生成
+  ExampleLibrary.vcxproj -> F:\gamejam\TencentGameHomework\RankingListUnrealTemplateProject\Plugins\RankingListPlugin\Source\ThirdParty\RankingListPluginLibrary\x64\Release\ExampleLibrary.dll
+  系统找不到指定的路径。
+  已复制         0 个文件。
+D:\VisualStudio\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(159,5): error MSB3073: 命令“copy "F:\gamejam\TencentGameHomework\RankingListUnrealTemplateProject\Plugins\RankingListPlugin\Source\ThirdParty\RankingListPluginLibrary\x64\Release\ExampleLibrary.dll" "F:\gamejam\TencentGameHomework\RankingListUnrealTemplateProject\Plugins\RankingListPlugin\Source\ThirdParty\RankingListPluginLibrary\..\..\..\Binaries\ThirdParty\RankingListPluginLibrary\Win64\"
+D:\VisualStudio\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(159,5): error MSB3073: :VCEnd”已退出，代码为 1。
